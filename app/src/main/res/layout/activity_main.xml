@@ -11,10 +11,12 @@
    <androidx.appcompat.widget.Toolbar
        android:id="@+id/toolBar"
        android:layout_width="match_parent"
-       android:layout_height="wrap_content"
+       android:layout_height="50dp"
        app:title="Docs Scanner"
        android:background="@color/orange"
        app:titleTextColor="@color/white"
+       app:contentInsetStart="15dp"
+       app:titleTextAppearance="@style/ToolbarTitleText"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintTop_toTopOf="parent"/>

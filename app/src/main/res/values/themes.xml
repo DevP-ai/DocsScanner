@@ -13,4 +13,10 @@
         <item name="postSplashScreenTheme">@style/Base.Theme.DocScanner</item>
         <item name="windowSplashScreenAnimationDuration">2000</item>
     </style>
+
+    <style name="ToolbarTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">25sp</item>
+    </style>
+
+
 </resources>
