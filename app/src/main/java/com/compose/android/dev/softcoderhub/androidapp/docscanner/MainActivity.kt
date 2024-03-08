@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.compose.android.dev.softcoderhub.androidapp.docscanner.databinding.ActivityMainBinding
 import com.compose.android.dev.softcoderhub.androidapp.docscanner.utils.Utils.handleActivityResult
+import com.compose.android.dev.softcoderhub.androidapp.docscanner.utils.Utils.onScanButtonClick
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -35,7 +36,8 @@ class MainActivity : AppCompatActivity() {
             handleActivityResult(result,this)
         }
 
-        
-
+        binding.btnScan.setOnClickListener {
+            onScanButtonClick(this,scannerLauncher)
+        }
     }
 }
