@@ -47,4 +47,6 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation(libs.play.services.mlkit.document.scanner)
+
+    implementation(libs.androidx.core.splashscreen)
 }
