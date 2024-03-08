@@ -7,13 +7,60 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+   <androidx.appcompat.widget.Toolbar
+       android:id="@+id/toolBar"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:title="Docs Scanner"
+       android:background="@color/orange"
+       app:titleTextColor="@color/white"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pdfRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/pdf_view"
+        app:layout_constraintStart_toStartOf="@id/toolBar"
+        app:layout_constraintEnd_toEndOf="@id/toolBar"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+   <LinearLayout
+       android:id="@+id/btnScan"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginBottom="30dp"
+       android:layout_marginEnd="20dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:background="@drawable/btn_bg">
+
+       <ImageView
+           android:layout_width="30dp"
+           android:layout_height="30dp"
+           android:layout_gravity="center"
+           android:layout_marginStart="15dp"
+           android:contentDescription="scan pdf"
+           android:src="@drawable/ic_add"/>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="SCAN PDF"
+           android:textStyle="bold"
+           android:textSize="20sp"
+           android:textColor="@color/white"
+           android:layout_gravity="center"
+           android:layout_marginStart="5dp"
+           android:layout_marginTop="15dp"
+           android:layout_marginBottom="15dp"
+           android:layout_marginEnd="20dp"/>
+
+   </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
