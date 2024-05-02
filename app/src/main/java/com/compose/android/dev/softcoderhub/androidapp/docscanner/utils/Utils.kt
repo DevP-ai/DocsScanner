@@ -3,11 +3,12 @@ package com.compose.android.dev.softcoderhub.androidapp.docscanner.utils
 import android.app.Activity
 import android.content.Context
 import android.content.IntentSender
-import android.net.Uri
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.IntentSenderRequest
+import androidx.core.content.FileProvider
 import com.compose.android.dev.softcoderhub.androidapp.docscanner.roomDB.entity.PDF
 import com.compose.android.dev.softcoderhub.androidapp.docscanner.ui.PdfViewModel
 import com.google.mlkit.vision.documentscanner.GmsDocumentScannerOptions
@@ -21,6 +22,7 @@ import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import java.io.File
 
 object Utils {
     fun handleActivityResult(activityResult: ActivityResult,context: Context,viewModel: PdfViewModel){
@@ -29,15 +31,21 @@ object Utils {
             val result = GmsDocumentScanningResult.fromActivityResultIntent(activityResult.data)
 
             if(resultCode == Activity.RESULT_OK && result != null){
+//                result.pages?.let { pages ->
+//                    for (page in pages){
+//                        val imageUri = pages[0].imageUri
+//                    }
+//                }
 
                 result.pdf?.uri?.path?.let { path->
+                    val externalUri = FileProvider.getUriForFile(context, context.packageName + ".provider", File(path))
 
-                    val title = "Docs_${System.currentTimeMillis()}"
+                    val title = "Docs_${System.currentTimeMillis()}.pdf"
 
                     val pdfDoc = PDF(
                         id = 0,
                         title =title,
-                        filepath = Uri.parse(result.pdf!!.uri.path)
+                        filepath = externalUri.path.toString()
                     )
 
                     insertPdf(pdfDoc,viewModel)
@@ -59,6 +67,7 @@ object Utils {
             }
         }
     }
+
 
     fun onScanButtonClick(activity: Activity,scannerLauncher : ActivityResultLauncher<IntentSenderRequest>){
         try {

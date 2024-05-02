@@ -1,9 +1,7 @@
 package com.compose.android.dev.softcoderhub.androidapp.docscanner.adapter
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.compose.android.dev.softcoderhub.androidapp.docscanner.databinding.PdfViewBinding
 import com.compose.android.dev.softcoderhub.androidapp.docscanner.roomDB.entity.PDF
@@ -11,10 +9,6 @@ import com.compose.android.dev.softcoderhub.androidapp.docscanner.roomDB.entity.
 class PdfAdapter:RecyclerView.Adapter<PdfAdapter.PdfViewHolder>(){
 
     private var pdfList = ArrayList<PDF>()
-
-    var onItemClick :((PDF)->Unit?)?=null
-    var onDotClick :((PDF)->Unit?)?=null
-
 
     inner class PdfViewHolder(val binding : PdfViewBinding):RecyclerView.ViewHolder(binding.root)
 
@@ -30,17 +24,8 @@ class PdfAdapter:RecyclerView.Adapter<PdfAdapter.PdfViewHolder>(){
         val data=pdfList[position]
 
         holder.binding.pdfTitle.text = data.title.toString()
-
-        holder.binding.pdfLayout.setOnClickListener {
-            onItemClick!!.invoke(pdfList[position])
-        }
-
-        holder.binding.dotLayout.setOnClickListener {
-            onDotClick!!.invoke(pdfList[position])
-        }
     }
 
-    @SuppressLint("NotifyDataSetChanged")
     fun setData(newList:List<PDF>){
         pdfList.clear()
         pdfList.addAll(newList)

@@ -13,12 +13,4 @@ class PdfRepository(private val pdfDao: PdfDao) {
     fun  getAllPdf():LiveData<List<PDF>>{
         return pdfDao.getAllPdf()
     }
-
-    suspend fun deletePdf(pdf: PDF){
-        pdfDao.deletePdf(pdf)
-    }
-
-    suspend fun  updateTitle(pdf: PDF){
-        pdfDao.updateTitle(pdf)
-    }
 }
