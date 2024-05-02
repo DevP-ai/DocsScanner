@@ -59,4 +59,6 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
     kapt("androidx.room:room-compiler:2.6.1")
+    implementation("com.github.mhiew:android-pdf-viewer:3.2.0-beta.1")
+    implementation("com.google.android.gms:play-services-ads:23.0.0")
 }

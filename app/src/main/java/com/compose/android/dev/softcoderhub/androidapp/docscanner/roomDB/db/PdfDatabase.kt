@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.compose.android.dev.softcoderhub.androidapp.docscanner.roomDB.entity.PDF
 
-@Database(entities = [PDF::class], version = 1)
+@Database(entities = [PDF::class], version = 1, exportSchema = true)
 abstract class PdfDatabase :RoomDatabase(){
     abstract fun pdfDao():PdfDao
 

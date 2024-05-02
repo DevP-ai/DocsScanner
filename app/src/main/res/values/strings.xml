@@ -3,4 +3,5 @@
     <string name="scan_pdf">SCAN PDF</string>
     <string name="pdf_name">Pdf name</string>
     <string name="pdf_image">Pdf Image</string>
+    <string name="share">SHARE</string>
 </resources>

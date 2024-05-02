@@ -23,5 +23,16 @@ class PdfViewModel(application: Application):AndroidViewModel(application) {
         pdfRepository.insertPdf(pdf)
     }
 
+    fun deletePdf(pdf: PDF){
+        viewModelScope.launch (Dispatchers.IO){
+            pdfRepository.deletePdf(pdf)
+        }
+    }
+
+    fun updateTitle(pdf: PDF){
+        viewModelScope.launch (Dispatchers.IO){
+            pdfRepository.updateTitle(pdf)
+        }
+    }
 
 }
