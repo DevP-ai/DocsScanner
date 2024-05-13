@@ -1,4 +1,4 @@
-![screen_4](https://github.com/DevP-ai/DocsScanner/assets/107491760/f3991fb9-852c-407e-be5c-a0f96736224a)# DocsScanner
+# DocsScanner
 
 <a href="https://play.google.com/store/apps/details?id=com.compose.android.dev.softcoderhub.androidapp.docscanner&pcampaignid=web_share">
   <img alt="Banner"
@@ -12,9 +12,9 @@
 
 # ScreenShots
 
-<img src="https://github.com/DevP-ai/DocsScanner/assets/107491760/13c8911b-045d-48a2-b955-b82cf5ffdc96" width="250">
-<img src="https://github.com/DevP-ai/DocsScanner/assets/107491760/5eed48dd-cdf7-452d-a5d1-1a68353f9f48" width="250">
-<img src="https://github.com/DevP-ai/DocsScanner/assets/107491760/040a541a-6c33-4814-a333-c4fe35112852" width="250">
-<img src="https://github.com/DevP-ai/DocsScanner/assets/107491760/88e61efc-3d0b-459b-beaa-0be8a47c5b8b" width="250">
+<img src="https://github.com/DevP-ai/DocsScanner/assets/107491760/13c8911b-045d-48a2-b955-b82cf5ffdc96" width="200">
+<img src="https://github.com/DevP-ai/DocsScanner/assets/107491760/5eed48dd-cdf7-452d-a5d1-1a68353f9f48" width="200">
+<img src="https://github.com/DevP-ai/DocsScanner/assets/107491760/040a541a-6c33-4814-a333-c4fe35112852" width="200">
+<img src="https://github.com/DevP-ai/DocsScanner/assets/107491760/88e61efc-3d0b-459b-beaa-0be8a47c5b8b" width="200">
 
 
